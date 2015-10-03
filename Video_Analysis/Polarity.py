@@ -12,7 +12,7 @@ def get_polarity(path) :
         f = open(f1,'r')
         file_content = f.read()
         file_content = unicode(file_content,'utf-8')
-        document = TextBlob(f.read())
+        document = TextBlob(file_content)
         dict[f1] = document.sentiment.polarity
         f.close()
     return dict
